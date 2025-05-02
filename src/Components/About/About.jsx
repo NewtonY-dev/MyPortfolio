@@ -28,7 +28,7 @@ const About = () => {
                   <ul>
                     <li>
                       <i className="bi bi-chevron-right"></i>{" "}
-                      <strong>Age:</strong> <span>20</span>
+                      <strong>Phone:</strong> <span>+251 931 559 554</span>
                     </li>
                     <li>
                       <i className="bi bi-chevron-right"></i>{" "}
