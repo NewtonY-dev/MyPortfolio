@@ -1,6 +1,3 @@
-import React from "react";
-import { HashLink } from "react-router-hash-link";
-
 const Footer = () => {
   return (
     <footer id="footer" className="footer light-background">
@@ -16,29 +13,33 @@ const Footer = () => {
           </p>
         </div>
         <div className="social-links d-flex justify-content-center">
-          <HashLink smooth to="/#" className="email">
+          <a href="mailto:yetsedawn@gmail.com" className="email">
             <i className="bi bi-envelope-fill"></i>
-          </HashLink>
-          <HashLink smooth to="/#" className="linkedin">
+          </a>
+          <a
+            href="https://www.linkedin.com/in/newton-yetsedaw-205628364"
+            className="linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="bi bi-linkedin"></i>
-          </HashLink>
-          <HashLink
-            smooth
-            to="https://t.me/Newborn_1234"
+          </a>
+          <a
+            href="https://t.me/Mr_Newbon"
             className="telegram"
             target="_blank"
             rel="noopener noreferrer"
           >
             <i className="bi bi-telegram"></i>
-          </HashLink>
-          <HashLink
-            smooth
-            to="https://github.com/NewtonY-dev"
+          </a>
+          <a
+            href="https://github.com/NewtonY-dev"
             className="github"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <i className="bi bi-github"></i>
-          </HashLink>
+          </a>
         </div>
       </div>
     </footer>

@@ -1,208 +1,108 @@
-import React from "react";
-import profileImg from "../../assets/img/profile-img.jpg";
+import { techStack } from "../../constants/techStack";
 
 const About = () => {
+  const highlights = [
+    "Build full-stack apps with React, Node.js, and modern tooling",
+    "Focus on performance, accessibility, and clean UI/UX",
+    "Comfortable collaborating across design, product, and engineering",
+    "Value maintainable code, testing, and clear communication",
+  ];
+
   return (
     <main className="main">
       <section id="about" className="about section">
         <div className="container section-title" data-aos="fade-up">
           <h2>About</h2>
-        </div>
-
-        <div className="container" data-aos="fade-up" data-aos-delay="100">
-          <div className="row gy-4 justify-content-center">
-            <div className="col-lg-4">
-              <img src={profileImg} className="img-fluid" alt="" />
-            </div>
-            <div className="col-lg-8 content">
-              <h2>Full - Stack Developer.</h2>
-              <p className="fst-italic py-3">
-                Hi, I'm Newton Yetsedaw, a Full-Stack developer passionate about
-                building responsive, user-friendly websites. I focus on creating
-                clean, efficient code and enjoy turning ideas into functional,
-                visually appealing solutions. Let's work together to create
-                something amazing.
-              </p>
-              <div className="row">
-                <div className="col-lg-6">
-                  <ul>
-                    <li>
-                      <i className="bi bi-chevron-right"></i>{" "}
-                      <strong>Phone:</strong> <span>+251 931 559 554</span>
-                    </li>
-                    <li>
-                      <i className="bi bi-chevron-right"></i>{" "}
-                      <strong>City:</strong> <span>Bahir Dar, Ethiopia</span>
-                    </li>
-                    <li>
-                      <i className="bi bi-chevron-right"></i>{" "}
-                      <strong>Age:</strong> <span>20</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="col-lg-6">
-                  <ul>
-                    <li>
-                      <i className="bi bi-chevron-right"></i>{" "}
-                      <strong>Degree:</strong>{" "}
-                      <span>Computer Science Undergraduate</span>
-                    </li>
-                    <li>
-                      <i className="bi bi-chevron-right"></i>{" "}
-                      <strong>Email:</strong>{" "}
-                      <span>yetsedawnewton@gmail.com </span>
-                    </li>
-                    <li>
-                      <i className="bi bi-chevron-right"></i>{" "}
-                      <strong>Freelance:</strong> <span>Available</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" className="skills section">
-        <div className="container section-title" data-aos="fade-up">
-          <h2>Skills</h2>
           <p>
-            Leveraging modern technologies, I build responsive and robust web
-            applications that blend creativity with functionality.
+            Full-stack developer focused on building fast, accessible, and
+            user-friendly web products.
           </p>
         </div>
 
         <div className="container" data-aos="fade-up" data-aos-delay="100">
-          <div className="row skills-content skills-animation">
+          {/* Bio Section - Not in card, max 70% width */}
+          <div className="row justify-content-center mb-4">
+            <div className="col-lg-10 col-xl-8">
+              <h3>Bio</h3>
+              <p className="py-2">
+                I’m a web developer specializing in React and Node.js. I deliver
+                production‑ready applications focused on performance,
+                accessibility, and easy maintenance. I handle front‑end,
+                back‑end, and cloud deployment (AWS) — from prototype to
+                production.
+              </p>
+            </div>
+          </div>
+
+          {/* Card-based sections */}
+          <div className="row gy-4">
+            {/* Contact Info Card */}
             <div className="col-lg-6">
-              <div className="progress">
-                <span className="skill">
-                  <span>HTML</span> <i className="val">100%</i>
-                </span>
-                <div className="progress-bar-wrap">
-                  <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: "100%", backgroundColor: "#34B7A7" }}
-                    aria-valuenow="100"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div className="progress">
-                <span className="skill">
-                  <span>CSS3</span> <i className="val">100%</i>
-                </span>
-                <div className="progress-bar-wrap">
-                  <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: "100%", backgroundColor: "#34B7A7" }}
-                    aria-valuenow="90"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div className="progress">
-                <span className="skill">
-                  <span>Bootstrap</span> <i className="val">95%</i>
-                </span>
-                <div className="progress-bar-wrap">
-                  <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: "95%", backgroundColor: "#34B7A7" }}
-                    aria-valuenow="90"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div className="progress">
-                <span className="skill">
-                  <span>JavaScript</span> <i className="val">95%</i>
-                </span>
-                <div className="progress-bar-wrap">
-                  <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: "95%", backgroundColor: "#34B7A7" }}
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
+              <div
+                className="about-card"
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
+                <h3 className="about-card-title">Contact Info</h3>
+                <ul className="about-card-list">
+                  <li>
+                    <i className="bi bi-chevron-right"></i>{" "}
+                    <strong>Location:</strong> <span>Bahir Dar, Ethiopia</span>
+                  </li>
+                  <li>
+                    <i className="bi bi-chevron-right"></i>{" "}
+                    <strong>Freelance:</strong> <span>Available</span>
+                  </li>
+                  <li>
+                    <i className="bi bi-chevron-right"></i>{" "}
+                    <strong>Email:</strong> <span>yetsedawn@gmail.com</span>
+                  </li>
+                  <li>
+                    <i className="bi bi-chevron-right"></i>{" "}
+                    <strong>Focus:</strong>{" "}
+                    <span>Full-stack Web Development</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
+            {/* Highlights Card */}
             <div className="col-lg-6">
-              <div className="progress">
-                <span className="skill">
-                  <span>React</span> <i className="val">95%</i>
-                </span>
-                <div className="progress-bar-wrap">
-                  <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: "95%", backgroundColor: "#34B7A7" }}
-                    aria-valuenow="80"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
+              <div
+                className="about-card"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h3 className="about-card-title">Highlights</h3>
+                <ul className="about-card-list">
+                  {highlights.map((item, idx) => (
+                    <li key={idx}>
+                      <i className="bi bi-check-circle"></i> {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
+            </div>
 
-              <div className="progress">
-                <span className="skill">
-                  <span>node js</span> <i className="val">95%</i>
-                </span>
-                <div className="progress-bar-wrap">
-                  <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: "95%", backgroundColor: "#34B7A7" }}
-                    aria-valuenow="90"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div className="progress">
-                <span className="skill">
-                  <span>Firebase</span> <i className="val">85%</i>
-                </span>
-                <div className="progress-bar-wrap">
-                  <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: "85%", backgroundColor: "#34B7A7" }}
-                    aria-valuenow="80"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div className="progress">
-                <span className="skill">
-                  <span>SQL & Mysql</span> <i className="val">90%</i>
-                </span>
-                <div className="progress-bar-wrap">
-                  <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: "90%", backgroundColor: "#34B7A7" }}
-                    aria-valuenow="55"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
+            {/* Tech Stack Card - Full Width */}
+            <div className="col-12">
+              <div
+                className="about-card"
+                data-aos="fade-up"
+                data-aos-delay="250"
+              >
+                <h3 className="about-card-title">Tech Stack</h3>
+                <div className="row g-2">
+                  {techStack.map((tech, idx) => (
+                    <div key={idx} className="col-6 col-md-4 col-lg-3">
+                      <span
+                        className="badge bg-light text-dark w-100 py-2"
+                        style={{ border: "1px solid rgba(0,0,0,0.08)" }}
+                      >
+                        {tech}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
